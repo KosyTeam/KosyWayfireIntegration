@@ -1,7 +1,7 @@
 # Kosy Wayfire Integration
-Simple plugin to integrate the Kosy enviroment with Wayfire.
+Simple plugin to integrate the Kosy enviroment with Wayfire. Plugin provides necessary features for Jupiter (and later also Kerberos).
 
-Plugin provides necessary features for Jupiter (and later also Kerberos).
+Depends on Wayfire obviously.
 
 ### Build and install
 meson build
