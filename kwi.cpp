@@ -4,7 +4,7 @@
 #include <wayfire/workspace-manager.hpp>
 #include <wayfire/signal-definitions.hpp>
 
-class primary_monitor_switch_t : public wf::plugin_interface_t
+class kosy_wayfire_integration : public wf::plugin_interface_t
 {
 	std::unique_ptr<wf::workspace_manager::anchored_area> anchored_area_top;
 	std::unique_ptr<wf::workspace_manager::anchored_area> anchored_area_left;
