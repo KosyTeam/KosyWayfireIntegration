@@ -89,4 +89,4 @@ class primary_monitor_switch_t : public wf::plugin_interface_t
     }
 };
 
-DECLARE_WAYFIRE_PLUGIN(kosy-wayfire-integration)
+DECLARE_WAYFIRE_PLUGIN(kosy_wayfire_integration)
