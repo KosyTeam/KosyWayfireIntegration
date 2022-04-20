@@ -15,7 +15,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 			
 			if (view->get_app_id() == "eu.kosy.Jupiter"){				
 				int width = output->get_layout_geometry().width;
-				int height = output->get_layout_geometry().width;
+				int height = output->get_layout_geometry().height;
 				
 				if(view->get_title() == "panelWindow"){
 					LOGI("Found 1");
