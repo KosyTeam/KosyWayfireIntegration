@@ -22,6 +22,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					view->move(0, 0);
 					view->set_decoration(NULL);
 					view->resize(width, 30);
+					view->set_sticky(true);
 					output->workspace->add_view(view, wf::LAYER_TOP);
 					
 					anchored_area_top = std::make_unique<wf::workspace_manager::anchored_area>();
@@ -40,6 +41,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					view->move(0, 30);
 					view->set_decoration(NULL);
 					view->resize(80, height);
+					view->set_sticky(true);
 					output->workspace->add_view(view, wf::LAYER_TOP);
 					
 					anchored_area_left = std::make_unique<wf::workspace_manager::anchored_area>();
