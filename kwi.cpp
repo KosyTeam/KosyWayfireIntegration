@@ -40,7 +40,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					LOGI("Found 2");
 					view->move(0, 30);
 					view->set_decoration(NULL);
-					view->resize(80, height);
+					view->resize(80, height - 30);
 					view->set_sticky(true);
 					output->workspace->add_view(view, wf::LAYER_TOP);
 					
