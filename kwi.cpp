@@ -23,6 +23,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					view->set_decoration(NULL);
 					view->resize(width, 30);
 					view->set_sticky(true);
+					view->set_role(wf::VIEW_ROLE_DESKTOP_ENVIRONMENT);
 					output->workspace->add_view(view, wf::LAYER_TOP);
 					
 					anchored_area_top = std::make_unique<wf::workspace_manager::anchored_area>();
@@ -42,6 +43,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					view->set_decoration(NULL);
 					view->resize(80, height - 30);
 					view->set_sticky(true);
+					view->set_role(wf::VIEW_ROLE_DESKTOP_ENVIRONMENT);
 					output->workspace->add_view(view, wf::LAYER_TOP);
 					
 					anchored_area_left = std::make_unique<wf::workspace_manager::anchored_area>();
@@ -59,7 +61,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					LOGI("Found 3");
 					view->move(80, 30);
 					view->set_decoration(NULL);
-					view->resize(250, height - 30);
+					view->resize(400, height - 30);
 					view->set_sticky(true);
 					output->workspace->add_view(view, wf::LAYER_TOP);
 					
