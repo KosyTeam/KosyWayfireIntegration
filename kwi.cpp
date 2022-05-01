@@ -54,6 +54,17 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					output->workspace->reflow_reserved_areas();
 					view->move(0, 30);
 				}
+				
+				if(view->get_title() == "menuWindow"){
+					LOGI("Found 3");
+					view->move(80, 30);
+					view->set_decoration(NULL);
+					view->resize(250, height - 30);
+					view->set_sticky(true);
+					output->workspace->add_view(view, wf::LAYER_TOP);
+					
+					view->move(80, 30);
+				}
 			}
 	};
 	
