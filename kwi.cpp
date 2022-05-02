@@ -75,6 +75,12 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					output->call_plugin("expo/toggle", data);
 					view->close();
 				}
+				if(view->get_title() == "comunWayScale"){
+					wf::activator_data_t data;
+					data.source = wf::activator_source_t::PLUGIN;
+					output->call_plugin("scale/toggle", data);
+					view->close();
+				}
 			}
 	};
 	
