@@ -67,6 +67,14 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 					
 					view->move(80, 30);
 				}
+				
+				//Following should rather be replaced with dbus but it works for now
+				if(view->get_title() == "comunWayExpo"){
+					wf::activator_data_t data;
+					data.source = wf::activator_source_t::PLUGIN;
+					output->call_plugin("expo/toggle", data);
+					view->close();
+				}
 			}
 	};
 	
@@ -74,7 +82,7 @@ class kosy_wayfire_integration : public wf::plugin_interface_t
 			//test
 			auto view = get_signaled_view(data);
 			
-			if (view->get_app_id() == "eu.kosy.Jupiter"){
+			if (view->get_app_id() == "eu.kosy.Jupiter" && view->get_title() == "dockWindow"){
 				
 				if(anchored_area_top){
 					output->workspace->remove_reserved_area(anchored_area_top.get());
